@@ -1,0 +1,11 @@
+{
+  "name": "poptory",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && flask run\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
