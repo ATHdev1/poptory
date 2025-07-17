@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import LoginForm from './LoginForm'
 
 function App() {
   const [msg, setMsg] = useState('Loading...')
@@ -10,7 +11,11 @@ function App() {
       .catch(err => setMsg('Error: ' + err.message))
   }, [])
 
-  return <h1>{msg}</h1>
+  return (
+    <div className="App">
+      <LoginForm />
+    </div>
+  );
 }
 
 export default App
