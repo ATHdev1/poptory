@@ -1,12 +1,25 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
+from flask import Flask
+from extensions import db, cors
 
-app = Flask(__name__)
-CORS(app)  # CORS 허용
+def create_app():
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 
-@app.route('/api/hello', methods=['GET'])
-def hello():
-    return jsonify({'message': '백엔드에서 프론트로 메세지 전달했고, 이게 잘 갔으면 이 메시지가 뜨는거임'})
+    db.init_app(app)
+    cors.init_app(app)
 
+    with app.app_context():
+        from models import User
+        db.create_all()
+
+    from auth import auth_bp
+    from kakao_auth import kakao_bp
+    app.register_blueprint(auth_bp, url_prefix='/auth')
+    app.register_blueprint(kakao_bp, url_prefix='/kakao')
+
+    return app
+
+# 서버 실행 부분
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app = create_app()
+    app.run(debug=True)
