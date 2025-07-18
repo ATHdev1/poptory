@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Jua&display=swap');
 
+:root {
+    --main-color: #7FB285;
+}
+
+.backgroundMainColor {
+    background-color: var(--main-color);
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -31,8 +39,8 @@ body {
     border-radius: 5%/ 30%;
 }
 
-.logInInput:focus{
+.logInInput:focus {
     outline: none;
     box-sizing: border-box;
-    border: solid 2px #7FB285;
+    border: solid 2px var(--main-color);
 }

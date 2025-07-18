@@ -22,7 +22,7 @@ function LoginForm() {
         <div style={{ marginBottom: '10px' }}>
           <input type="password" value={password} placeholder='비밀번호' onChange={(e) => setPassword(e.target.value)} required className='logInInput' />
         </div>
-        <button type="submit" className='logInInput' style={{backgroundColor: "#7FB285"}}>로그인</button>
+        <button type="submit" className='logInInput backgroundMainColor'>로그인</button>
       </form>
     </div>
   );
