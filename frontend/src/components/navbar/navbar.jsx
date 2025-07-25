@@ -1,10 +1,13 @@
 import './navbar.css';
 import { FaList } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 function Navbar(){
     return(
         <nav className='navbar'>
-            <div style={{fontFamily: 'Jua'}}>PopTory</div>
+            <Link to="/" style={{ fontFamily: 'Jua', textDecoration: 'none', color: 'inherit' }}>
+                PopTory
+            </Link>
             <FaList></FaList>
         </nav>
     )

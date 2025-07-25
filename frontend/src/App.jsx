@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import LoginForm from './pages/LoginForm/LoginForm.jsx';
 import Home from './pages/Home/Home.jsx';
 import Navbar from './components/navbar/navbar.jsx';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [msg, setMsg] = useState('Loading...')
@@ -17,7 +17,10 @@ function App() {
     <div>
       <Navbar></Navbar>
       <div className='page-wrapper'>
-        <Home></Home>
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='*' element={<h3>404 error</h3>}></Route>
+        </Routes>
       </div>
     </div>
   );

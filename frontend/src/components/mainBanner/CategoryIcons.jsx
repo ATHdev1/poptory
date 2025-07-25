@@ -8,14 +8,14 @@ import { MdMonitorHeart } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
 
 const categoryIcons = [
-  CgGames,
-  GiClothes,
-  TbPerfume,
-  IoFastFood,
-  GiBullyMinion,
-  GiPaintBucket,
-  MdMonitorHeart,
-  FaHeart,
+  {icon: CgGames, path: '/category/test1'},
+  {icon: GiClothes, path: '/category/test2'},
+  {icon: TbPerfume, path: '/category/test3'},
+  {icon: IoFastFood, path: '/category/test4'},
+  {icon: GiBullyMinion, path: '/category/test5'},
+  {icon: GiPaintBucket, path: '/category/test6'},
+  {icon: MdMonitorHeart, path: '/category/test7'},
+  {icon: FaHeart, path: '/category/test8'},
 ];
 
 export default categoryIcons;
