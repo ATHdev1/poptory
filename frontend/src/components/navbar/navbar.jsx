@@ -6,7 +6,7 @@ function Navbar(){
     return(
         <nav className='navbar'>
             <Link to="/" style={{ fontFamily: 'Jua', textDecoration: 'none', color: 'inherit' }}>
-                PopTory
+                Poptory
             </Link>
             <FaList></FaList>
         </nav>
