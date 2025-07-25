@@ -1,9 +1,11 @@
-import './navbar.css'
+import './navbar.css';
+import { FaList } from "react-icons/fa6";
 
 function Navbar(){
     return(
         <nav className='navbar'>
-            hello
+            <div style={{fontFamily: 'Jua'}}>PopTory</div>
+            <FaList></FaList>
         </nav>
     )
 }

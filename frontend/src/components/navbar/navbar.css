@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Jua&display=swap');
 
 .navbar {
-    height: 20vw;
-    background-color: aqua;
-    border-bottom: 1px solid black;
+    height: 50px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-size: 20px;
 }
