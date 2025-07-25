@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from extensions import db, cors
 
 from auth import auth_bp
