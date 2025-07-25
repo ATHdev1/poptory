@@ -20,6 +20,6 @@ def create_app():
 
     @app.route('/')
     def home():
-        return jsonify({"message": "✅ Poptory 백엔드 정상 동작 중입니다!"})
+        return jsonify({"message": "✅ 백엔드에서 보낸 메시지가 정상적으로 도착함. 즉, 이 메시지가 보인다면 백엔드와 프론트 연결이 완료된거임. "})
 
     return app
