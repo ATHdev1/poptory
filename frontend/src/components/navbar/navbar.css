@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Jua&display=swap');
+
+.navbar {
+    height: 20vw;
+    background-color: aqua;
+    border-bottom: 1px solid black;
+}

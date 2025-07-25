@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import LoginForm from './pages/LoginForm/LoginForm.jsx';
 import Home from './pages/Home/Home.jsx';
+import Navbar from './components/navbar/navbar.jsx';
 
 function App() {
   const [msg, setMsg] = useState('Loading...')
@@ -13,8 +14,8 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <Home></Home>
+    <div>
+      <Navbar></Navbar>
     </div>
   );
 }
