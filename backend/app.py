@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from extensions import db, cors
 
 from auth import auth_bp
@@ -20,6 +20,6 @@ def create_app():
 
     @app.route('/')
     def home():
-        return '✅ Poptory 백엔드 정상 동작 중입니다!'
+        return jsonify({"message": "✅ Poptory 백엔드 정상 동작 중입니다!"})
 
     return app
