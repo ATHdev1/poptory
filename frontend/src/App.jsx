@@ -16,6 +16,9 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
+      <div className='page-wrapper'>
+        <Home></Home>
+      </div>
     </div>
   );
 }
