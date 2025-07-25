@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
-import LoginForm from './LoginForm'
+import { useEffect, useState } from 'react';
+import LoginForm from './pages/LoginForm/LoginForm.jsx';
+import Home from './pages/Home/Home.jsx';
 
 function App() {
   const [msg, setMsg] = useState('Loading...')
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <LoginForm />
+      <Home></Home>
     </div>
   );
 }
