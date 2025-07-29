@@ -1,0 +1,27 @@
+
+.LocalRankPanel-title{
+    width:fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.RegionButtons-slide-container{
+    width: 100%;
+    height: 30px;
+}
+
+.storeCards-slide-container{
+    width: 100%;
+    height: 300px;
+}
+
+.see_all_RegionRank-button{
+    width: 150px;
+    height: 50px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border: solid #999999 1px;
+}
