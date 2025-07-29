@@ -1,7 +1,7 @@
 import requests
 from flask import Blueprint, request, redirect, jsonify
 from poptory.backend.extensions.extensions import db
-from poptory.backend.models import User
+from poptory.backend.models.models import User
 
 kakao_bp = Blueprint('kakao', __name__)
 

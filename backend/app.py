@@ -3,8 +3,8 @@ from poptory.backend.extensions.extensions import db, cors
 from poptory.backend.store.store import store_bp
 
 from poptory.backend.auth.auth import auth_bp
-from kakao_auth import kakao_bp
-from models import User
+# from kakao_auth import kakao_bp
+from poptory.backend.models.models import User
 
 
 def create_app():
@@ -15,13 +15,11 @@ def create_app():
     cors.init_app(app)
 
     with app.app_context():
-        from poptory.backend.models import User
+        from poptory.backend.models.models import User
         db.create_all()
 
-    from poptory.backend.auth.auth import auth_bp
-    from poptory.backend.kakao_auth import kakao_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
-    app.register_blueprint(kakao_bp, url_prefix='/kakao')
+    # app.register_blueprint(kakao_bp, url_prefix='/kakao')
     app.register_blueprint(store_bp, url_prefix='/store')
 
     @app.route('/')

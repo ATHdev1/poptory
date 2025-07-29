@@ -1,7 +1,7 @@
 import random, string
 from flask import Blueprint, request, jsonify
 from poptory.backend.extensions.extensions import db
-from poptory.backend.models import User
+from poptory.backend.models.models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from poptory.backend.email_utils import send_verification_email
 
