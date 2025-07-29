@@ -1,4 +1,4 @@
-from poptory.backend.extensions import db
+from poptory.backend.extensions.extensions import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)

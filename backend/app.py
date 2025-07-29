@@ -1,6 +1,6 @@
-from flask import Flask
-from poptory.backend.extensions import db, cors
-from poptory.backend.store import store_bp
+from flask import Flask,jsonify
+from poptory.backend.extensions.extensions import db, cors
+from poptory.backend.store.store import store_bp
 
 from auth import auth_bp
 from kakao_auth import kakao_bp
