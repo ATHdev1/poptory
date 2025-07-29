@@ -2,7 +2,7 @@ from flask import Flask,jsonify
 from poptory.backend.extensions.extensions import db, cors
 from poptory.backend.store.store import store_bp
 
-from auth import auth_bp
+from poptory.backend.auth.auth import auth_bp
 from kakao_auth import kakao_bp
 from models import User
 
@@ -18,7 +18,7 @@ def create_app():
         from poptory.backend.models import User
         db.create_all()
 
-    from poptory.backend.auth import auth_bp
+    from poptory.backend.auth.auth import auth_bp
     from poptory.backend.kakao_auth import kakao_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(kakao_bp, url_prefix='/kakao')
