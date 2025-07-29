@@ -26,14 +26,3 @@
 
     background-color: pink;
 }
-
-.category-map {
-    margin-top: 50px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, min-content);
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-}
