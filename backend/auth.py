@@ -24,8 +24,7 @@ def register():
         password=hashed_pw,
         nickname=data['nickname'],
         verification_code=code,
-        is_verified=False,
-        is_business=data.get('is_business', False)  # True면 사업자, 없으면 기본 False
+        is_verified=False
     )
     db.session.add(new_user)
     db.session.commit()
