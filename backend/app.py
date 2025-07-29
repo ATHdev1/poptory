@@ -1,9 +1,11 @@
 from flask import Flask
 from poptory.backend.extensions import db, cors
+from poptory.backend.store import store_bp
 
 from auth import auth_bp
 from kakao_auth import kakao_bp
 from models import User
+
 
 def create_app():
     app = Flask(__name__)
@@ -20,6 +22,7 @@ def create_app():
     from poptory.backend.kakao_auth import kakao_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(kakao_bp, url_prefix='/kakao')
+    app.register_blueprint(store_bp, url_prefix='/store')
 
     @app.route('/')
     def home():
