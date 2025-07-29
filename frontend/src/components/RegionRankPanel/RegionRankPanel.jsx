@@ -1,9 +1,9 @@
-import './LocalRankPanel.css';
+import './RegionRankPanel.css'
 
-function LocalRankPanel() {
+function RegionRankPanel() {
     return (
         <div>
-            <div className='LocalRankPanel-title'>
+            <div className='RegionRankPanel-title'>
                 <h3>지역별 랭킹</h3>
             </div>
 
@@ -35,4 +35,4 @@ function LocalRankPanel() {
     )
 }
 
-export default LocalRankPanel;
+export default RegionRankPanel;

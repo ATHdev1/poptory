@@ -8,7 +8,7 @@ import { MdMonitorHeart } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
 
 const categoryIcons = [
-  {icon: CgGames, path: '/category/test1'},
+  {icon: CgGames, path: '/category/game'},
   {icon: GiClothes, path: '/category/test2'},
   {icon: TbPerfume, path: '/category/test3'},
   {icon: IoFastFood, path: '/category/test4'},

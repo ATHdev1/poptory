@@ -1,5 +1,5 @@
 import './MainBanner.css';
-import categoryIcons from './CategoryIcons';
+import CategoryIconGrid from '../CategoryItemGrid/CategoryItemGrid';
 import { useNavigate } from 'react-router-dom';
 
 function MainBanner() {
@@ -12,15 +12,8 @@ function MainBanner() {
                     <div className='carousel-display'></div>
                 </div>
 
-                <div className='category-map'>
-                    {categoryIcons.map(function(item, i) {
-                        let Icon = item.icon;
-                        return (
-                            <div key={i} onClick={()=> window.location.href = item.path}>
-                                <Icon size={25}></Icon>
-                            </div>
-                        );
-                    })}
+                <div>
+                    <CategoryIconGrid></CategoryIconGrid>
                 </div>
             </div>
         </div>

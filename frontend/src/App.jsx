@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Home from './pages/Home/Home.jsx';
 import Navbar from './components/navbar/navbar.jsx';
+import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <div className='page-wrapper'>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/category/:category' element={<CategoryPage></CategoryPage>}></Route>
           <Route path='*' element={<h3>404 error</h3>}></Route>
         </Routes>
       </div>
