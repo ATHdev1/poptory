@@ -8,6 +8,7 @@ class User(db.Model):
     kakao_id = db.Column(db.String(100), unique=True, nullable=True)
     is_verified = db.Column(db.Boolean, default=False)  # 인증 여부
     verification_code = db.Column(db.String(10))  # 인증코드 저장용
+    is_business = db.Column(db.Boolean, default=False)  # 사업자 여부 (False면 개인)
     
 class Store(db.Model):
     id = db.Column(db.Integer, primary_key=True)
