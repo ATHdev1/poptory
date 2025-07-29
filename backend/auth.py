@@ -1,9 +1,9 @@
 import random, string
 from flask import Blueprint, request, jsonify
-from extensions import db
-from models import User
+from poptory.backend.extensions import db
+from poptory.backend.models import User
 from werkzeug.security import generate_password_hash, check_password_hash
-from email_utils import send_verification_email
+from poptory.backend.email_utils import send_verification_email
 
 auth_bp = Blueprint('auth', __name__)
 
