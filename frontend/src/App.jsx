@@ -22,7 +22,6 @@ function App() {
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='*' element={<h3>404 error</h3>}></Route>
         </Routes>
-        <Home />
       </div>
     </div>
   );
