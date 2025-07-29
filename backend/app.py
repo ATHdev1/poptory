@@ -1,6 +1,10 @@
 from flask import Flask
 from poptory.backend.extensions import db, cors
 
+from auth import auth_bp
+from kakao_auth import kakao_bp
+from models import User
+
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -17,9 +21,12 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(kakao_bp, url_prefix='/kakao')
 
-    return app
+    @app.route('/')
+    def home():
+        return jsonify({"message": "✅ 백엔드에서 보낸 메시지가 정상적으로 도착함. 즉, 이 메시지가 보인다면 백엔드와 프론트 연결이 완료된거임. "})
 
-# 서버 실행 부분
-if __name__ == '__main__':
-    app = create_app()
-    app.run(debug=True)
+    @app.route('/ping')
+    def ping():
+        return 'pong'
+
+    return app

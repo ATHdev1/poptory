@@ -1,2 +1,8 @@
-pip install flask flask_sqlalchemy flask_cors requests
-
+Flask==2.3.2
+gunicorn==21.2.0
+flask_sqlalchemy==3.1.1
+flask_cors==4.0.0
+requests==2.31.0
+Flask-Mail==0.9.1
+python-dotenv==1.0.1
+PyJWT==2.8.0

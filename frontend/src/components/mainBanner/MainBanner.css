@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Jua&display=swap');
+
+.MainBanner-wrapper {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.MainBanner-subwrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    height: 350px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel-display {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10%;
+
+    background-color: pink;
+}
+
+.category-map {
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
