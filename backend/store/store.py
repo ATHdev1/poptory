@@ -8,17 +8,26 @@ store_bp = Blueprint('store', __name__)
 @store_bp.route('/stores', methods=['POST'])
 def create_store():
     data = request.get_json()
+    required_fields = ['name', 'location_id', 'category_id', 'user_id']
+    if not all(field in data for field in required_fields):
+        return jsonify({"error": "Missing required fields"}), 400
+    
     store = Store(
         name=data['name'],
-        description=data.get('description', ''),
+        description=data.get('description'),
         location=data.get('location', ''),
-        start_date=data.get('start_date', ''),
-        end_date=data.get('end_date', ''),
-        user_id=data['user_id']  # 로그인 연동 안됐으니 임시로 받기
+        start_date=data.get('start_date'),
+        end_date=data.get('end_date'),
+        user_id=data['user_id'],  # 로그인 연동 안됐으니 임시로 받기
+        location_id=data['location_id'],
+        category_id=data['category_id']
     )
     db.session.add(store)
     db.session.commit()
-    return jsonify({'id': store.id}), 201
+    return jsonify({
+        "message": "Store created successfully",
+        'id': store.id
+        }), 201
 
 # 전체 목록 조회
 @store_bp.route('/stores', methods=['GET'])
@@ -58,3 +67,36 @@ def delete_store(store_id):
     db.session.delete(store)
     db.session.commit()
     return jsonify({'message': '삭제 완료'})
+
+# 👇 이 아래는 임시 seed 용 코드입니다. 테스트 후 반드시 삭제하시오!
+
+if __name__ == '__main__':
+    from poptory.backend.extensions.extensions import db
+    from poptory.backend.models.models import Location, Category
+    from flask import Flask
+
+    app = Flask(__name__)
+    app.config.from_object('poptory.backend.configs.default')
+    db.init_app(app)
+
+    with app.app_context():
+        if not Location.query.first():
+            locations = [
+                Location(name="서울 강남구"),
+                Location(name="서울 종로구"),
+                Location(name="부산 해운대구")
+            ]
+            db.session.add_all(locations)
+
+        if not Category.query.first():
+            categories = [
+                Category(name="의류"),
+                Category(name="식음료"),
+                Category(name="뷰티"),
+                Category(name="잡화")
+            ]
+            db.session.add_all(categories)
+
+        db.session.commit()
+        print("✅ Seed 데이터가 성공적으로 삽입되었사옵니다.")
+
