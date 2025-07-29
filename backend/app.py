@@ -30,4 +30,3 @@ def create_app():
         return 'pong'
 
     return app
-하이요 ㅋㅋ
