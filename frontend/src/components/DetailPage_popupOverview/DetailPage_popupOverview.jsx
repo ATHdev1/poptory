@@ -14,7 +14,7 @@ function DetailPage_popupOverview({ popup }) {
                 </div>
                 <div className='DetailPage-popupOverview-contents-container'>
                     <div className='DetailPage-popupOverview-thumbnailImg-wrapper'>
-                        <div className='DetailPage-popupOverview-thumbnailImg'></div>
+                        <div style={{ backgroundImage: `url(${popup.썸네일})` }} className='DetailPage-popupOverview-thumbnailImg'></div>
                     </div>
                     <div className='DetailPage-popupOverview-text-container'>
                         <div className='DetailPage-popupOverview-text-address-wrapper'>

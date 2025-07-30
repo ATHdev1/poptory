@@ -9,10 +9,16 @@
 .PopupCardLarge-thumbnailImage-wrapper{
     width: 180px;
     height: 230px;
+}
 
+.PopupCardLarge-thumbnailImage{
     border-radius: 10%;
 
-    background-color: pink;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 
 .PopupCardLarge-text-wrapper{

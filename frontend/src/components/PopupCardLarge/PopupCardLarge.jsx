@@ -4,7 +4,7 @@ function PopupCardLarge({popup}){
     return(
         <div className="PopupCardLarge-mainWrapper">
             <div className="PopupCardLarge-thumbnailImage-wrapper" onClick={() => window.location.href=`/stores/${popup.id}`}>
-                <div className="PopupCardLarge-thumbnailImage">
+                <div className="PopupCardLarge-thumbnailImage" style={{ backgroundImage: `url(${popup.썸네일})` }}>
                     {/* 여기가 썸네일 사진 넣는 곳인데, 일단 css로 핑크 네모 넣겠음 */}
                 </div>
             </div>

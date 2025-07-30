@@ -11,7 +11,6 @@ function CategoryPage() {
         return popup.카테고리 == category;
     })
 
-    console.log(popups);
     return (
         <div>
             <CategoryItemGrid></CategoryItemGrid>
