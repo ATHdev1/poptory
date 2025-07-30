@@ -11,7 +11,7 @@ function DetailPage() {
         return popup.id == id;
     })
 
-    let [ showDetail, setShowDetail ] = useState(false)
+    let [ showDetail, setShowDetail ] = useState(true)
 
     return (
         <div>
@@ -19,9 +19,7 @@ function DetailPage() {
 
             <div className='DetailPage-detailInfo-container'>
                 <div className='DetailPage-showMore-button-wrapper'>
-                    <div className='DetailPage-showMore-button' onClick={function(){
-                        setShowDetail(!showDetail)
-                    }}>
+                    <div className='DetailPage-showMore-button'>
                         <p style={{ fontSize: '18px' }}>상세 정보</p>
                     </div>
                 </div>
