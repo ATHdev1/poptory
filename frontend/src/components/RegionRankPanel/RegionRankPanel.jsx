@@ -10,8 +10,8 @@ function RegionRankPanel() {
             <div className='RegionRankPanel-container'>
                 <div className='RegionButtons-slide-container'>
                     <div className='RegionButtons-slide-wrapper'>
-                        <div className='RegionButtons-slide'>
-                            강남 성수... 지역 선택 버튼들 올 자리
+                        <div className='RegionButton'>
+                            <p>강남</p>
                         </div>
                     </div>
                 </div>
@@ -19,7 +19,13 @@ function RegionRankPanel() {
                 <div className='storeCards-slide-container'>
                     <div className='storeCards-slide-wrapper'>
                         <div className='storeCards-slide'>
-                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink'}}>팝업스토어 인포 카드 이미지 날짜 등등</div>
+                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink', flex: '0 0 auto', scrollSnapAlign: 'start' }}>팝업스토어 인포 카드 이미지 날짜 등등</div>
+                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink', flex: '0 0 auto', scrollSnapAlign: 'start' }}>팝업스토어 인포 카드 이미지 날짜 등등</div>
+                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink', flex: '0 0 auto', scrollSnapAlign: 'start' }}>팝업스토어 인포 카드 이미지 날짜 등등</div>
+                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink', flex: '0 0 auto', scrollSnapAlign: 'start' }}>팝업스토어 인포 카드 이미지 날짜 등등</div>
+                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink', flex: '0 0 auto', scrollSnapAlign: 'start' }}>팝업스토어 인포 카드 이미지 날짜 등등</div>
+                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink', flex: '0 0 auto', scrollSnapAlign: 'start' }}>팝업스토어 인포 카드 이미지 날짜 등등</div>
+                            <div style={{ width: '150px', height: '280px' , backgroundColor: 'pink', flex: '0 0 auto', scrollSnapAlign: 'start' }}>팝업스토어 인포 카드 이미지 날짜 등등</div>
                         </div>
                     </div>
                 </div>
