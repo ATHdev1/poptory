@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './App.css';
 import Home from './pages/Home/Home.jsx';
 import Navbar from './components/navbar/navbar.jsx';
 import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
