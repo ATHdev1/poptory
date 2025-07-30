@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from poptory.backend.extensions.extensions import db
-from poptory.backend.models.models import Store
+from poptory.backend.models.models import Store,User
 
 store_bp = Blueprint('store', __name__)
 
