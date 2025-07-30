@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home/Home.jsx';
 import Navbar from './components/navbar/navbar.jsx';
 import CategoryPage from './pages/CategoryPage/CategoryPage.jsx';
+import DetailPage from './pages/DetailPage/DetailPage.jsx';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/category/:category' element={<CategoryPage></CategoryPage>}></Route>
+          <Route path='/stores/:id' element={<DetailPage></DetailPage>}></Route>
           <Route path='*' element={<h3>404 error</h3>}></Route>
         </Routes>
       </div>

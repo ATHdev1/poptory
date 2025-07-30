@@ -1,0 +1,44 @@
+.DetailPage-popupOverview-container {
+    height: 400px;
+}
+
+.DetailPage-popupOverview-wrapper {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.DetailPage-popupOverview-header-wrapper {
+    height: 80px;
+
+    text-align: center;
+}
+
+.DetailPage-popupOverview-contents-container {
+    height: 300px;
+
+    display: flex
+}
+
+.DetailPage-popupOverview-thumbnailImg-wrapper {
+    height: 90%;
+    aspect-ratio: 0.8;
+}
+
+.DetailPage-popupOverview-thumbnailImg {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 10%;
+    background-color: pink;
+}
+
+.DetailPage-popupOverview-text-container {
+    height: 90%;
+    margin-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
