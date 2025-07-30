@@ -11,11 +11,18 @@ def create_store():
     required_fields = ['name', 'location_id', 'category_id', 'user_id']
     if not all(field in data for field in required_fields):
         return jsonify({"error": "Missing required fields"}), 400
+
+    user = db.session.get(User, data['user_id'])
+    location = db.session.get(Location, data['location_id'])
+    category = db.session.get(Category, data['category_id'])
+
+    if not user or not location or not category:
+        return jsonify({"error": "Invalid foreign key reference. You fucked up"}), 400
     
     store = Store(
         name=data['name'],
         description=data.get('description'),
-        location=data.get('location', ''),
+        location=data.get('location'),
         start_date=data.get('start_date'),
         end_date=data.get('end_date'),
         user_id=data['user_id'],  # 로그인 연동 안됐으니 임시로 받기

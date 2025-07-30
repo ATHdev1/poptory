@@ -18,7 +18,7 @@ class Store(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text)
-    location = db.Column(db.String(255))
+
     start_date = db.Column(db.String(50))
     end_date = db.Column(db.String(50))
     
