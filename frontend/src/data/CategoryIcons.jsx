@@ -1,5 +1,5 @@
 import { CgGames } from "react-icons/cg";
-import { GiClothes } from "react-icons/gi";
+import { IoMdMusicalNotes } from "react-icons/io";
 import { TbPerfume } from "react-icons/tb";
 import { IoFastFood } from "react-icons/io5";
 import { GiBullyMinion } from "react-icons/gi";
@@ -9,7 +9,7 @@ import { FaHeart } from "react-icons/fa";
 
 const categoryIcons = [
   {icon: CgGames, path: '/category/game'},
-  {icon: GiClothes, path: '/category/test2'},
+  {icon: IoMdMusicalNotes, path: '/category/music'},
   {icon: TbPerfume, path: '/category/test3'},
   {icon: IoFastFood, path: '/category/test4'},
   {icon: GiBullyMinion, path: '/category/test5'},
