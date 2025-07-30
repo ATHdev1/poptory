@@ -1,44 +1,14 @@
-.DetailPage-popupOverview-container {
-    height: 400px;
+.DetailPage-showMore-button-wrapper{
+    margin-top: 50px;
 }
 
-.DetailPage-popupOverview-wrapper {
-    height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
+.DetailPage-showMore-button{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 
-.DetailPage-popupOverview-header-wrapper {
-    height: 80px;
+    border: 2px solid #777777;
+    border-radius: 5%;
 
     text-align: center;
-}
-
-.DetailPage-popupOverview-contents-container {
-    height: 300px;
-
-    display: flex
-}
-
-.DetailPage-popupOverview-thumbnailImg-wrapper {
-    height: 90%;
-    aspect-ratio: 0.8;
-}
-
-.DetailPage-popupOverview-thumbnailImg {
-    height: 100%;
-    width: 100%;
-
-    border-radius: 10%;
-    background-color: pink;
-}
-
-.DetailPage-popupOverview-text-container {
-    height: 90%;
-    margin-left: 10px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
 }
