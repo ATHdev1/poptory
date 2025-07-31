@@ -14,6 +14,9 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+
+    display: flex;
+    gap: 10px;
 }
 
 .see_all_RegionRank-button {
@@ -41,6 +44,8 @@
 .storeCards-slide-container {
     width: 100%;
     height: 300px;
+
+    margin-top: 10px;
 }
 
 .storeCards-slide-wrapper {
@@ -49,11 +54,13 @@
     -webkit-overflow-scrolling: touch;
 
     padding-left: 15px;
+    padding-right: 15px;
     box-sizing: border-box;
 }
 
 .storeCards-slide {
     display: flex;
-
     gap: 15px;
+
+    min-width: max-content;
 }
