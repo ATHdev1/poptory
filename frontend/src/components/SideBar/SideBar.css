@@ -15,7 +15,7 @@
     transition: transform 200ms ease-out;
 }
 
-.sideBar-wrapper.open{
+.sideBar-wrapper.open {
     transform: translateX(0%);
 }
 
@@ -25,7 +25,11 @@
 }
 
 .sideBar-closeBtn {
-
     background-color: transparent;
     border: none;
+}
+
+.sideBar_profileCard_wrapper {
+    padding: 16px;
+    border-bottom: 2px solid #999999;
 }
