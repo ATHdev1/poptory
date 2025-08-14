@@ -2,13 +2,35 @@
 
 .navbar {
     height: 50px;
-    
 
-    display:flex;
+
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
 
     font-size: 20px;
+}
+
+.sideBar-backdrop {
+    position:fixed;
+    top:0;
+    left:0;
+    height: 200vh;
+    width: 200vw;
+    
+    background-color: black;
+    z-index: 10;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.sideBar-backdrop.show{
+    opacity: 0.6;
+
+    pointer-events: auto;
+    visibility: visible;
 }
