@@ -1,0 +1,8 @@
+.sideBar_list-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 0;
+}

@@ -1,5 +1,6 @@
 import "./SideBar.css"
-import SideBar_ProfileCard from "../SideBar_ProfileCard/IsNotLogIn/SideBar_ProfileCard";
+import SideBar_ProfileCard from "./SideBar_ProfileCard/IsNotLogIn/SideBar_ProfileCard";
+import SideBar_List from "./SideBar_List/SideBar_List";
 
 function SideBar({ showSideBar, setShowSideBar }) {
     return (
@@ -12,6 +13,7 @@ function SideBar({ showSideBar, setShowSideBar }) {
             <div className="sideBar_profileCard_wrapper">
                 <SideBar_ProfileCard></SideBar_ProfileCard>
             </div>
+            <SideBar_List setShowSideBar={setShowSideBar}></SideBar_List>
         </div>
     )
 }

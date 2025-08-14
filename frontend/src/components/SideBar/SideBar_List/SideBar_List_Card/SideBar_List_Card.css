@@ -1,0 +1,9 @@
+.SideBar_List_Card-wrapper{
+    width: 100%;
+    height: 50px;
+}
+
+.SideBar_ListCard-content-wrapper{
+    margin-top: auto;
+    margin-bottom: auto;
+}
