@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './navbar.css';
 import { FaList } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
@@ -7,6 +7,12 @@ import SideBar from '../SideBar/SideBar';
 
 function Navbar() {
     const [showSideBar, setShowSideBar] = useState(false);
+    useEffect(() => {
+        document.body.style.overflow = showSideBar ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [showSideBar]);
+
+
 
     return (
         <nav className='navbar'>
@@ -15,7 +21,7 @@ function Navbar() {
             </Link>
             <FaList onClick={function () { setShowSideBar(!showSideBar) }}></FaList>
 
-            <div className={`sideBar-backdrop ${showSideBar?'show':''}`} onClick={()=>{setShowSideBar(false)}}></div>
+            <div className={`sideBar-backdrop ${showSideBar ? 'show' : ''}`} onClick={() => { setShowSideBar(false) }}></div>
             <SideBar setShowSideBar={setShowSideBar} showSideBar={showSideBar}></SideBar>
         </nav>
     )

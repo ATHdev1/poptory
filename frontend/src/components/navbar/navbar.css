@@ -33,4 +33,6 @@
 
     pointer-events: auto;
     visibility: visible;
+
+    touch-action: none;
 }
