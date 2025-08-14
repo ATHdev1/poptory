@@ -15,7 +15,7 @@ function Navbar() {
             </Link>
             <FaList onClick={function () { setShowSideBar(!showSideBar) }}></FaList>
 
-            <div className={`sideBar-backdrop ${showSideBar?'show':''}`}></div>
+            <div className={`sideBar-backdrop ${showSideBar?'show':''}`} onClick={()=>{setShowSideBar(false)}}></div>
             <SideBar setShowSideBar={setShowSideBar} showSideBar={showSideBar}></SideBar>
         </nav>
     )
